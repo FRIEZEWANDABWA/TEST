@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+        nav { margin-bottom: 40px; padding: 15px 0; border-bottom: 1px solid #eee; }
+        nav a { margin-right: 30px; text-decoration: none; color: #333; font-weight: 600; padding: 8px 16px; border-radius: 6px; transition: all 0.3s ease; }
+        nav a:hover { color: #007bff; background: #f8f9fa; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #007bff; padding-bottom: 15px; margin-bottom: 10px; font-size: 2.2em; }
+        h2 { color: #34495e; margin-top: 30px; font-size: 1.5em; }
+        h3 { color: #007bff; margin-top: 25px; font-size: 1.2em; }
+        h4 { color: #495057; margin-top: 20px; }
+        .section { margin-bottom: 35px; line-height: 1.6; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        p { line-height: 1.7; color: #555; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: #2c3e50; }
+        @media (max-width: 768px) {
+            .container { padding: 20px; margin: 10px; }
+            nav a { margin-right: 15px; font-size: 14px; }
+            h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/experience">Experience</a>
+            <a href="/achievements">Achievements</a>
+            <a href="/projects">Projects</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
